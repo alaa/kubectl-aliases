@@ -1,4 +1,4 @@
-kubectl lexical aliases for Kubernetes resources, APIs, CRDs, Istio, Flagger, Canaries.
+402 kubectl Conflict-Free Lexical Aliases (Kubernetes resources, APIs, CRDs, Istio, Flagger, Canaries)
 
 ```
 alias kgcr='kubectl get clusterrole'
