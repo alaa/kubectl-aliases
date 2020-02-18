@@ -411,3 +411,31 @@ alias ktp='kubectl top pod'
 alias ktn='kubectl top node'
 
 ```
+
+# How to install the as ZSH plugin
+
+## Download the file from master and put on the custom folder.
+```
+cd $ZSH_CUSTOM; mkdir kubectl; cd kubectl; wget https://raw.githubusercontent.com/alaa/kubectl-aliases/master/kubectl.plugin.zsh
+```
+
+## Update the ~/.zsh
+```
+vi ~/.zshrc
+```
+
+### Add the `kubectl` plugin to the enable ones
+```
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+     ...
+     kubectl
+     ...
+     )
+
+source $ZSH/oh-my-zsh.sh
+ ```
