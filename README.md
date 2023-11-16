@@ -1,4 +1,12 @@
-402 kubectl Conflict-Free Lexical Aliases (Kubernetes resources, APIs, CRDs, Istio, Flagger, Canaries)
+# Conflict-Free Kubectl aliases - forked from alaa/kubectl-aliases
+
+## How To Install
+- Place the kubectl.plugin.zsh in `$ZSH_CUSTOM/plugins/kubectl`
+- Add `kubectl` to the list of ZSH Plugins in `~/.zshrc` file.
+- Reload ZSH using with `source $ZSH/oh-my-zsh.sh` or start a new terminal session.
+- Alternatively, you can store the file in another working directory and use `mkdir -p $ZSH_CUSTOM/plugins/kubectl && ln -s /path/to/kubectl.plugin.zsh $ZSH_CUSTOM/plugins/kubectl` to keep the file more easily available for updating as not all references are included here.
+
+## Command Reference _(May be out of date - check plugin file for most up to date)_
 
 ```
 alias kgcr='kubectl get clusterrole'
@@ -411,31 +419,3 @@ alias ktp='kubectl top pod'
 alias ktn='kubectl top node'
 
 ```
-
-# How to install the as ZSH plugin
-
-## Download the file from master and put on the custom folder.
-```
-cd $ZSH_CUSTOM; mkdir kubectl; cd kubectl; wget https://raw.githubusercontent.com/alaa/kubectl-aliases/master/kubectl.plugin.zsh
-```
-
-## Update the ~/.zsh
-```
-vi ~/.zshrc
-```
-
-### Add the `kubectl` plugin to the enable ones
-```
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-     ...
-     kubectl
-     ...
-     )
-
-source $ZSH/oh-my-zsh.sh
- ```
